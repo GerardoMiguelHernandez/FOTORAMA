@@ -2,6 +2,7 @@
 @section('title','Home')
 @section('css')
   {!! Html::style('css/animate.css'); !!}
+
   <style>
         /* jssor slider arrow navigator skin 05 css */
         /*
@@ -225,7 +226,7 @@
 
  <div class="row">
 @foreach($alleventos as $eventico)
-<div class="col s12 m4 l4">
+<div class="col s12 m3 l3">
   <div class="card small sticky-action teal">
     <div class="card-image waves-effect waves-block waves-teal">
       <img class="activator responsive-img" src="/uploads/{{$eventico->imagen}}">
@@ -292,7 +293,7 @@
 
 <div class="row">
 @foreach($imagenes as $imagen)
-<div class="col s12 m4 l4">
+<div class="col s12 m3 l3">
   <div class="card small">
     <div class="card-image waves-effect waves-block waves-red">
       <img class="activator responsive-img" src="/uploads/{{$imagen->imagen}}">
@@ -346,7 +347,7 @@
 
 <div class="row">
 @foreach($albums as $album)
-<div class="col s12 m4 l4">
+<div class="col s12 m3 l3">
   <div class="card small">
     <div class="card-image waves-effect waves-block waves-orange">
       <img class="activator responsive-img" src="/uploads/{{$album->imagen}}">
@@ -416,6 +417,35 @@
 <h2 class='animated rotateIn'>It Works!</h2>
 
 
+
+    <div class="row">
+    @foreach($alleventos as $evento)
+      <div class="col s12 m3 l3">
+        <div class="card teal small">
+        <div class="card-image">
+     <img src="/uploads/{{$evento->imagen}}" class="img-responsive materialboxed">
+    </div>
+    <div class="card-content">
+      <span class="card-title activator grey-text text-darken-4"><i class="material-icons right">menu</i></span>
+          <h5 class="header center teal-text text-darken-4">titulo</h5>
+     
+ </div>
+ <div class="card-reveal">
+   <span class="card-title grey-text text-darken-4">TITULO<i class="material-icons right red600">close</i></span>
+   adfasdfasdf
+   adsfasdf
+ </div>
+         
+        </div>
+      </div>
+      @endforeach
+     
+    </div>
+
+    
+
+   
+            
 @endsection
 
 @section('js')
@@ -428,6 +458,16 @@
 {!! Html::script('js/highcharts/highcharts-3d.js'); !!}
 <script type="text/javascript">
   $(function(){
+
+$('.materialboxed').materialbox();
+$('.collapsible').collapsible();
+  });
+</script>
+
+<script type="text/javascript">
+  $(function(){
+    $('.materialboxed').materialbox();
+    $('.collapsible').collapsible();
      $('.slider').slider({full_width: true,interval:12000});
     // $('.iconSobre').hover.css({'background':'orange'});
      //$('.iconSobre').hover.addClass('animated bounceIn');

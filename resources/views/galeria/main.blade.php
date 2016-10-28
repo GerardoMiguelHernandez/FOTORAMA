@@ -15,7 +15,7 @@
 
 </head>
 
-<body class="grey darken-3">
+<body class="grey darken-4">
 	<header>
 	@yield('css')
 </header>
@@ -50,6 +50,9 @@
       $('.slider').slider({full_width: true});
       $('select').material_select();
 $('.modal-trigger').leanModal();
+ $('.collapsible').collapsible({
+      accordion : false // A setting that changes the collapsible behavior to expandable instead of the default accordion style
+    });
 
  
     });

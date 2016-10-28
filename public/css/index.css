@@ -59,7 +59,9 @@
 
 .material-icons.orange600 { color: #FB8C00; }
 .material-icons.teal600 { color: #1b5e20; } 
-.material-icons.blue600 { color: #03a9f4; }
+.material-icons.blue600 { color: #03a9f4; } 
+.material-icons.red600 { color: #dd2c00; }
+
 .iconfont{
 
  font-size: 5em; 
