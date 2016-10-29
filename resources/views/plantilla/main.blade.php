@@ -1,13 +1,13 @@
   <!DOCTYPE html>
 <html lang="en">
-	<head>
-	<title>Home</title>
-	<meta charset="utf-8">
-	<link rel="icon" href="img/favicon.ico" type="image/x-icon">
-	<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
-	<meta name="description" content="Your description">
-	<meta name="keywords" content="Your keywords">
-	<meta name="author" content="Your name">
+  <head>
+  <title>Galería Fotografica</title>
+  <meta charset="utf-8">
+  <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+  <meta name="description" content="Your description">
+  <meta name="keywords" content="Your keywords">
+  <meta name="author" content="Your name">
    <style>
         /* jssor slider arrow navigator skin 05 css */
         /*
@@ -115,15 +115,15 @@
         }
         
     </style>
-	<link rel="stylesheet" href="{{asset('kataklimt/css/bootstrap.css')}}" type="text/css" media="screen">
-	<link rel="stylesheet" href="{{asset('kataklimt/css/responsive.css')}}" type="text/css" media="screen">
-	<link rel="stylesheet" href="{{asset('kataklimt/css/style.css')}}" type="text/css" media="screen">
+  <link rel="stylesheet" href="{{asset('kataklimt/css/bootstrap.css')}}" type="text/css" media="screen">
+  <link rel="stylesheet" href="{{asset('kataklimt/css/responsive.css')}}" type="text/css" media="screen">
+  <link rel="stylesheet" href="{{asset('kataklimt/css/style.css')}}" type="text/css" media="screen">
     <link rel="stylesheet" href="{{asset('kataklimt/css/touchTouch.css')}}" type="text/css" media="screen">
-	 <link rel="stylesheet" href="{{asset('kataklimt/css/kwicks-slider.css')}}" type="text/css" media="screen">
+   <link rel="stylesheet" href="{{asset('kataklimt/css/kwicks-slider.css')}}" type="text/css" media="screen">
 
 
-	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
-	<script type="text/javascript" src="{{asset('kataklimt/js/jquery.js')}}"></script>
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
+  <script type="text/javascript" src="{{asset('kataklimt/js/jquery.js')}}"></script>
     <script type="text/javascript" src="{{asset('kataklimt/js/superfish.js')}}"></script>
       <script type="text/javascript" src="{{asset('kataklimt/js/jquery.flexslider-min.js')}}"></script>
        <script type="text/javascript" src="{{asset('kataklimt/js/jquery.kwicks-1.5.1.js')}}"></script>
@@ -135,21 +135,21 @@
     
 
   
-	
-	<script type="text/javascript">if($(window).width()>1024){document.write("<"+"script src='{{asset('kataklimt/js/jquery.preloader.js')}}'></"+"script>");}	</script>
+  
+  <script type="text/javascript">if($(window).width()>1024){document.write("<"+"script src='{{asset('kataklimt/js/jquery.preloader.js')}}'></"+"script>");} </script>
 
-	<script>		
-		 jQuery(window).load(function() {	
-		 $x = $(window).width();		
-	if($x > 1024)
-	{			
-	jQuery("#content .row").preloader();    }	
-		 
-     jQuery('.magnifier').touchTouch();			
-    jQuery('.spinner').animate({'opacity':0},1000,'easeOutCubic',function (){jQuery(this).css('display','none')});	
-  		  }); 
-				
-	</script>
+  <script>    
+     jQuery(window).load(function() { 
+     $x = $(window).width();    
+  if($x > 1024)
+  {     
+  jQuery("#content .row").preloader();    } 
+     
+     jQuery('.magnifier').touchTouch();     
+    jQuery('.spinner').animate({'opacity':0},1000,'easeOutCubic',function (){jQuery(this).css('display','none')});  
+        }); 
+        
+  </script>
 
   <script type="text/javascript">
         jQuery(document).ready(function ($) {
@@ -215,42 +215,49 @@
         });
         </script>
 
-	<!--[if lt IE 8]>
-  		<div style='text-align:center'><a href="http://www.microsoft.com/windows/internet-explorer/default.aspx?ocid=ie6_countdown_bannercode"><img src="http://www.theie6countdown.com/img/upgrade.jpg"border="0"alt=""/></a></div>  
- 	<![endif]-->
-	<!--[if (gt IE 9)|!(IE)]><!-->
-	<!--<![endif]-->
-	<!--[if lt IE 9]>
+  <!--[if lt IE 8]>
+      <div style='text-align:center'><a href="http://www.microsoft.com/windows/internet-explorer/default.aspx?ocid=ie6_countdown_bannercode"><img src="http://www.theie6countdown.com/img/upgrade.jpg"border="0"alt=""/></a></div>  
+  <![endif]-->
+  <!--[if (gt IE 9)|!(IE)]><!-->
+  <!--<![endif]-->
+  <!--[if lt IE 9]>
     <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <link rel="stylesheet" href="css/ie.css" type="text/css" media="screen">
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400' rel='stylesheet' type='text/css'>
   <![endif]-->
-	</head>
+  </head>
 
-	<body>
+  <body>
     <div class="spinner"></div> 
 <!--============================== header =================================-->
-<header style="background-image: url('/img/paisley//paisley.png');">
-      <div class="container clearfix" >
+<header style="background:url('/img/Camara.jpg')">
+      <div class="container clearfix">
     <div class="row">
           <div class="span12">
         <div class="navbar navbar_">
               <div class="container">
-            <h1 class="brand brand_"><a href="{{url('/')}}"><img alt="" src="/img/ic_launcher.png"> </a></h1>
+            <h1 class="brand brand_"><a href="{{url('/')}}">  
+              <h3>FOTORAMA</h3>
+            </a></h1>
             <a class="btn btn-navbar btn-navbar_" data-toggle="collapse" data-target=".nav-collapse_">Menu <span class="icon-bar"></span> </a>
             <div class="nav-collapse nav-collapse_  collapse">
                   <ul class="nav sf-menu">
                 <li class="active"><a href="{{url('/')}}">Home</a></li>
-                <li class="sub-menu"><a href="#">Centros</a>
+                <li class="sub-menu"><a>Centros</a>
                       <ul>
                       @foreach($centricos as $centrico)
                     <li><a href="{{route('centros.show', $centrico->id)}}">{{$centrico->nombre}}</a></li>
                     @endforeach
                   </ul>
                     </li>
-                <li><a href="{{route('eventos.index')}}">Eventos</a></li>
-               
+               <li class="sub-menu"><a>Categorias</a>
+                <ul>
+                      @foreach($categoria as $cate)
+                    <li><a href="{{route('categoria.show', $cate->id)}}">{{$cate->nombre}}</a></li>
+                    @endforeach
+                  </ul>
+                    </li>
                          <li><a href="{{route('login')}}">Login</a></li>
               </ul>
                 </div>
@@ -264,10 +271,19 @@
       <div class="container">
     <div class="row">
           <div class="span12"> 
+        
         <!--============================== slider =================================-->
+        <br></br>
+                <div class="flexslider">
+              <ul class="slides">
+            @foreach($neweventicos as $eventi)
+              <li> <img src="/slider/{{$eventi->imagen}}" alt="" > </li>
+            @endforeach
+          </ul>
+            </div>        <!--
              <div id="jssor_1" style="position: relative; margin: 0 auto; top: 0px; left: 0px; width: 960px; height: 480px; overflow: hidden; visibility: hidden; background-color: #24262e;">
         <!-- Loading Screen -->
-        <div data-u="loading" style="position: absolute; top: 0px; left: 0px;">
+       <!-- <div data-u="loading" style="position: absolute; top: 0px; left: 0px;">
             <div style="filter: alpha(opacity=70); opacity: 0.7; position: absolute; display: block; top: 0px; left: 0px; width: 100%; height: 100%;"></div>
             <div style="position:absolute;display:block;background:url('/img/loading.gif') no-repeat center center;top:0px;left:0px;width:100%;height:100%;"></div>
         </div>
@@ -281,9 +297,9 @@
            @endforeach
         </div>
         <!-- Thumbnail Navigator -->
-        <div data-u="thumbnavigator" class="jssort01-99-66" style="position:absolute;left:0px;top:0px;width:240px;height:480px;" data-autocenter="2">
+  <!--      <div data-u="thumbnavigator" class="jssort01-99-66" style="position:absolute;left:0px;top:0px;width:240px;height:480px;" data-autocenter="2">
             <!-- Thumbnail Item Skin Begin -->
-            <div data-u="slides" style="cursor: default;">
+<!--            <div data-u="slides" style="cursor: default;">
                 <div data-u="prototype" class="p">
                     <div class="w">
                         <div data-u="thumbnailtemplate" class="t"></div>
@@ -292,14 +308,14 @@
                 </div>
             </div>
             <!-- Thumbnail Item Skin End -->
-        </div>
+     <!--   </div>
         <!-- Arrow Navigator -->
-        <span data-u="arrowleft" class="jssora05l" style="top:158px;left:248px;width:40px;height:40px;" data-autocenter="2"></span>
+  <!--        <span data-u="arrowleft" class="jssora05l" style="top:158px;left:248px;width:40px;height:40px;" data-autocenter="2"></span>
         <span data-u="arrowright" class="jssora05r" style="top:158px;right:8px;width:40px;height:40px;" data-autocenter="2"></span>
-    </div>
+    </div>-->
         <span id="responsiveFlag"></span>
         <div class="block-slogan">
-              <h2>Bienvenido!</h2>
+            <!--<h2>Bienvenido!</h2>-->
               <div>
            <!-- <p><a href="http://blog.templatemonster.com/free-website-templates/ " target="_blank" class="link-1">Click here</a> for more info about this free website template created by TemplateMonster.com. This is a Bootstrap template that goes with several layout options (for desktop, tablet, smartphone landscape and portrait) to fit all popular screen resolutions. The PSD source files of this template are available for free for the registered members of TemplateMonster.com. Feel free to get them!</p> -->
           </div>
@@ -314,6 +330,9 @@
      <div class="row-1">
           <div class="container">
         <div class="row">
+          <article class="span12">
+              <h3>Ultimos Eventos</h3>
+            </article>
               <ul class="thumbnails thumbnails-1">
             
            
@@ -322,9 +341,9 @@
                   <div class="thumbnail thumbnail-1">
                 <h3 class="title-1 extra">{{$eventico->nombre}}</h3>
                 <img  src="/uploads/{{$eventico->imagen}}" alt="">
-                <section> <strong>Categoria</strong>{{$eventico->categoria->nombre}}
+                <section> <strong>Categoria: </strong>{{$eventico->categoria->nombre}}
                       <p>{{$eventico->descripcion}}</p>
-                      <a href="{{route('eventos.show',$eventico->id)}}" class="btn btn-1">Read More</a> </section>
+                      <a href="{{route('eventos.show',$eventico->id)}}" class="btn btn-1">Ir a evento</a> </section>
               </div>
                 </li>
                 @endforeach
@@ -333,11 +352,11 @@
       </div>
         </div>
     <div class="container">
-          <div class="row">
+          <div class="row"><!--
         <article class="span6">
               <h3>Informacion</h3>
               <div class="wrapper">
-            <figure class="img-indent"><img src="/nueva/{{$primero->imagen}}" alt="" /></figure>
+            <figure class="img-indent"><img src="/uploads/{{$primero->imagen}}" alt="" /></figure>
             <div class="inner-1 overflow extra">
                   <div class="txt-1">En el sitio web se muestran las fotografias de los eventos
                   que se han realizado en la empresa.</div>
@@ -364,14 +383,14 @@
             <li><a href="/uploads/{{$eventicos->imagen}}" class="magnifier" ><img src="/thumbnails/{{$eventicos->imagen}}" alt="" /></a></li>
             @endforeach
           </ul>
-            </article>
+            </article>-->
       </div>
         </div>
   </div>
     </div>
 
 <!--============================== footer =================================-->
-<footer>
+<footer style="background:url('/img/Camara1.jpg')">
       <div class="container clearfix">
     <ul class="list-social pull-right">
           <li><a class="icon-1" href="#"></a></li>
@@ -379,7 +398,7 @@
           <li><a class="icon-3" href="#"></a></li>
           <li><a class="icon-4" href="#"></a></li>
         </ul>
-    <div class="privacy pull-left">Galeria Fotografica</div>
+    <div class="privacy pull-left">Departamento de Informatica 2016</div>
   </div>
     </footer>
 <script type="text/javascript" src="js/bootstrap.js"></script>

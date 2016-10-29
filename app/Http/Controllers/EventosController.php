@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Evento;
 use App\Album;
+use App\Categoria;
 use App\Imagen;
 use App\CentroModel;
 use App\Http\Requests;
@@ -33,8 +34,9 @@ class EventosController extends Controller
         //
         $eventos = Evento::orderBy('created_at', 'DES')->get();
 $centricos = CentroModel::orderBy('created_at', 'DES')->get();
+$categoria = Categoria::orderBy('created_at', 'DES')->get();
 
-        return view('plantilla.eventos')->with(['eventos'=>$eventos,'centricos'=>$centricos]);
+        return view('plantilla.eventos')->with(['eventos'=>$eventos,'centricos'=>$centricos,'categoria'=>$categoria]);
     }
 
     /**
@@ -64,8 +66,11 @@ return view('admin.eventos.portada');
 
     
    $path = public_path().'/uploads/';
+   $path1 = public_path().'/slider/';
    //$image->save($path.$file->getClientOriginalName());
    $image = Image::make($file)->resize(350,350);
+   $image1 = Image::make($file)->resize(770,393);
+   $image1->save($path1.'evento_'. time() .$file->getClientOriginalName());
    // $image = Image::make($file);
    $image->save($path.'evento_'. time() .$file->getClientOriginalName());
    $event= new Evento();
@@ -93,6 +98,7 @@ return redirect()->action('AdminController@index');
     {
         //$
              $centricos = CentroModel::orderBy('created_at', 'DES')->get();
+             $categoria = Categoria::orderBy('created_at', 'DES')->get();
 
         $evento = Evento::find($id);
 $album = Album::first()->where('evento_id', $id)->get();
@@ -107,7 +113,7 @@ if($codigo == 0){
 }
 $imagen = Imagen::where('album_id', $codigo)->get();
 //dd($imagen);
-return view('plantilla.evento-galeria')->with(['imagen'=>$imagen,'evento'=>$evento,'centricos'=>$centricos]);
+return view('plantilla.evento-galeria')->with(['imagen'=>$imagen,'evento'=>$evento,'centricos'=>$centricos,'categoria'=>$categoria]);
 //$evento = Evento::find($id);
 //$evento = Evento::with('album.imagenes')->get();
 //$evento = Album::orderBy('id','DES')->where('evento_id',$id);
@@ -170,6 +176,7 @@ dd($eventos); */
 
    $evento=Evento::find($id);
    $path = public_path().'/uploads/';
+    $path1 = public_path().'/slider/';
    
    if($file == null){
    $evento->imagen= $evento->imagen;
@@ -177,6 +184,8 @@ dd($eventos); */
    else{
 
      //$image = Image::make($file);
+    $image1 = Image::make($file)->resize(770,393);
+   $image1->save($path1.'evento_'. time() .$file->getClientOriginalName());
      $image = Image::make($file)->resize(350,350);
    $image->save($path.'evento_'. time() .$file->getClientOriginalName());
    $evento->imagen= 'evento_'. time() .$file->getClientOriginalName();

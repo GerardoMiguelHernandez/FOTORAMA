@@ -54,26 +54,33 @@
 	<body>
 <div class="spinner"></div>
 <!--============================== header =================================-->
-<header style="background-image: url('/img/paisley//paisley.png');">
+<header style="background:url('/img/Camara.jpg')">
       <div class="container clearfix">
     <div class="row">
           <div class="span12">
         <div class="navbar navbar_">
               <div class="container">
-            <h1 class="brand brand_"><a href="{{url('/')}}"><img alt="" src="/img/ic_launcher.png"> </a></h1>
-            <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse_">Menu <span class="icon-bar"></span> </a>
+            <h1 class="brand brand_"><a href="{{url('/')}}">  
+              <h3>FOTORAMA</h3>
+            </a></h1>
+            <a class="btn btn-navbar btn-navbar_" data-toggle="collapse" data-target=".nav-collapse_">Menu <span class="icon-bar"></span> </a>
             <div class="nav-collapse nav-collapse_  collapse">
                   <ul class="nav sf-menu">
-               <li class="active"><a href="{{url('/')}}">Home</a></li>
-                <li class="sub-menu"><a href="#">Centros</a>
+                <li class="active"><a href="{{url('/')}}">Home</a></li>
+                <li class="sub-menu"><a>Centros</a>
                       <ul>
                       @foreach($centricos as $centrico)
                     <li><a href="{{route('centros.show', $centrico->id)}}">{{$centrico->nombre}}</a></li>
                     @endforeach
                   </ul>
                     </li>
-                <li><a href="{{route('eventos.index')}}">Eventos</a></li>
-               
+               <li class="sub-menu"><a>Categorias</a>
+                <ul>
+                      @foreach($categoria as $cate)
+                    <li><a href="{{route('categoria.show', $cate->id)}}">{{$cate->nombre}}</a></li>
+                    @endforeach
+                  </ul>
+                    </li>
                          <li><a href="{{route('login')}}">Login</a></li>
               </ul>
                 </div>
@@ -83,11 +90,11 @@
         </div>
   </div>
     </header>
+
+
+
 <div class="bg-content"> 
-      
-      <!--============================== content =================================-->
-      
-      <div id="content"><div class="ic">More Website Templates @ TemplateMonster.com. November19, 2012!</div>
+ <div id="content"><div class="ic"></div>
     <div class="container">
           <div class="row">
         <article class="span12">
@@ -95,8 +102,7 @@
             </article>
         <div class="clear"></div>
         <ul class="thumbnails thumbnails-1 list-services">
-            
-           @foreach($eventos as $allevento)
+               @foreach($eventos as $allevento)
               <li class="span4">
             <div class="thumbnail thumbnail-1"> <img  src="/uploads/{{$allevento->imagen}}" alt="">
                   <section> <a href="{{route('eventos.show', $allevento->id)}}" class="link-1">{{$allevento->nombre}}</a>
@@ -106,12 +112,13 @@
                 </div>
           </li>
           @endforeach
+           
+              
             </ul>
       </div>
         </div>
   </div>
     </div>
-
 <!--============================== footer =================================-->
 <footer>
       <div class="container clearfix">

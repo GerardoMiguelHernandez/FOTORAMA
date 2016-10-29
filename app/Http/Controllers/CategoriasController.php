@@ -85,9 +85,9 @@ return redirect()->action('CategoriasController@index');
         $category = Categoria::find($id);
         $event = Evento::where('categoria_id', $category->id)->get();
         $centricos = CentroModel::orderBy('created_at', 'DES')->get();
-
+        $categoria = Categoria::orderBy('created_at', 'DES')->get();
         //dd($event);
-        return view('template.categoriaevento')->with(['category'=>$category, 'event'=>$event,'centricos'=>$centricos]);
+        return view('template.categoriaevento')->with(['category'=>$category, 'event'=>$event,'centricos'=>$centricos,'categoria'=>$categoria]);
         //
     }
 

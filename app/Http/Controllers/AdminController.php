@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Evento;
+use App\Categoria;
 
 class AdminController extends Controller
 {
@@ -18,7 +19,11 @@ class AdminController extends Controller
         //return view('galeria.main');
 
         $eventos=Evento::orderBy('created_at','DES')->paginate(4);
-        return view('admin.eventos.index')->with('eventos',$eventos);
+
+        $categoria=Categoria::orderBy('created_at','DES')->get();
+        
+       
+        return view('admin.eventos.index')->with(['eventos'=>$eventos,'categoria'=>$categoria]);
     }
  public function vistaAdmin()
     {
@@ -59,7 +64,7 @@ class AdminController extends Controller
         //
 
 
-       
+
     }
 
     /**

@@ -33,15 +33,16 @@ $count_albums = Album::all()->count();
 $count_imagenes = Imagen::all()->count();
 $albumns = Album::with('imagenes')->orderBy('created_at','DES')->take(6)->get();
 $imagenes = Imagen::orderBy('created_at','DES')->skip(1)->take(12)->get();
-$eventicos = Evento::orderBy('created_at')->skip(1)->take(4)->get();
+$eventicos = Evento::orderBy('created_at','DES')->take(4)->get();
 $count_centros =CentroModel::all()->count();
 $even = Evento::orderBy('created_at','DES')->get();
 $categoria = Categoria::orderBy('created_at', 'DES')->get();
 $primero = $eventicos->first();
 $centricos = CentroModel::orderBy('created_at', 'DES')->get();
 $collection = collect(['center-align', 'left-align','right-align']);
+$neweventicos = Evento::orderBy('created_at','DES')->take(5)->get();
 
- return view('plantilla.main')->with(['imagenes'=>$imagenes,'eventicos'=>$eventicos,'count_imagenes' => $count_imagenes, 'count_albums' => $count_albums,'count' => $count,'count_centros'=>$count_centros,'count_users'=>$count_users,'even' => $even,'albumns'=>$albumns,'collection'=>$collection, 'categoria'=>$categoria, 'primero'=>$primero, 'centricos'=>$centricos]); 
+ return view('plantilla.main')->with(['imagenes'=>$imagenes,'eventicos'=>$eventicos,'count_imagenes' => $count_imagenes, 'count_albums' => $count_albums,'count' => $count,'count_centros'=>$count_centros,'count_users'=>$count_users,'even' => $even,'albumns'=>$albumns,'collection'=>$collection, 'categoria'=>$categoria, 'primero'=>$primero, 'centricos'=>$centricos,'neweventicos'=>$neweventicos]); 
     }
 
     /**

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-	<title>Services</title>
+	<title>Categoria</title>
 	<meta charset="utf-8">
 	<link rel="icon" href="img/favicon.ico" type="image/x-icon">
 	<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
@@ -25,7 +25,7 @@
   {!! Html::script('kataklimt/js/touchTouch.jquery.js'); !!}
   {!! Html::script('js/jssor.slider-21.1.5.mini.js'); !!}
 	
-	<script type="text/javascript">if($(window).width()>1024){document.write("<"+"script src='kataklimt/js/jquery.preloader.js'></"+"script>");}	</script>
+	<script type="text/javascript">if($(window).width()>1024){document.write("<"+"script src='{{asset('kataklimt/js/jquery.preloader.js')}}'></"+"script>");}	</script>
 	<script>		
 		 jQuery(window).load(function() {	
 		 $x = $(window).width();		
@@ -54,27 +54,34 @@
 	<body>
 <div class="spinner"></div>
 <!--============================== header =================================-->
-<header>
+<header style="background:url('/img/Camara.jpg')">
       <div class="container clearfix">
     <div class="row">
           <div class="span12">
         <div class="navbar navbar_">
               <div class="container">
-            <h1 class="brand brand_"><a href="index.html"><img alt="" src="img/logo.gif"> </a></h1>
-            <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse_">Menu <span class="icon-bar"></span> </a>
+            <h1 class="brand brand_"><a href="{{url('/')}}">  
+              <h3>FOTORAMA</h3>
+            </a></h1>
+            <a class="btn btn-navbar btn-navbar_" data-toggle="collapse" data-target=".nav-collapse_">Menu <span class="icon-bar"></span> </a>
             <div class="nav-collapse nav-collapse_  collapse">
                   <ul class="nav sf-menu">
-                <li><a href="index.html">About</a></li>
-                <li class="sub-menu active"><a href="index-1.html">Services</a>
+                <li class="active"><a href="{{url('/')}}">Home</a></li>
+                <li class="sub-menu"><a>Centros</a>
                       <ul>
-                    <li><a href="#">Dolore </a></li>
-                    <li><a href="#">Consecte</a></li>
-                    <li><a href="#">Conseq</a></li>
+                      @foreach($centricos as $centrico)
+                    <li><a href="{{route('centros.show', $centrico->id)}}">{{$centrico->nombre}}</a></li>
+                    @endforeach
                   </ul>
                     </li>
-                <li><a href="index-2.html">Folio</a></li>
-                <li><a href="index-3.html">Blog</a></li>
-                <li><a href="index-4.html">Contact</a></li>
+               <li class="sub-menu"><a>Categorias</a>
+                <ul>
+                      @foreach($categoria as $cate)
+                    <li><a href="{{route('categoria.show', $cate->id)}}">{{$cate->nombre}}</a></li>
+                    @endforeach
+                  </ul>
+                    </li>
+                         <li><a href="{{route('login')}}">Login</a></li>
               </ul>
                 </div>
           </div>
@@ -100,7 +107,7 @@
               <li class="span4">
             <div class="thumbnail thumbnail-1"> <img  src="/uploads/{{$allevento->imagen}}" alt="">
                   <section> <a href="{{route('eventos.show', $allevento->id)}}" class="link-1">{{$allevento->nombre}}</a>
-                <p>Categoria:{{$allevento->categoria->November19}}</p>
+                <p>Categoria:{{$allevento->categoria->nombre}}</p>
               </section>
                 </div>
           </li>

@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\CentroModel;
 use App\Evento;
+use App\Categoria;
 class CentrosController extends Controller
 {
     /**
@@ -65,13 +66,14 @@ return redirect()->action('CentrosController@index');
     public function show($id)
     {
         //dd($id);
+        $categoria=Categoria::orderBy('created_at','DES')->get();
     $centro = CentroModel::find($id);
      $centricos = CentroModel::orderBy('created_at', 'DES')->get();
 $event = Evento::where('centroOrganizador', $centro->id)->get();
 
 //dd($event);
 
-       return view('plantilla.detalle-centro')->with(['centro'=>$centro, 'event'=> $event,'centricos'=>$centricos]);
+       return view('plantilla.detalle-centro')->with(['centro'=>$centro, 'event'=> $event,'centricos'=>$centricos,'categoria'=>$categoria]);
         //
     }
 
