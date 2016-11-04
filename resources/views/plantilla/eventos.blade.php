@@ -75,9 +75,9 @@
                   </ul>
                     </li>
                <li class="sub-menu"><a>Categorias</a>
-                <ul>
+                <ul style="font-family:Garamond;font-size:16px">
                       @foreach($categoria as $cate)
-                    <li><a href="{{route('categoria.show', $cate->id)}}">{{$cate->nombre}}</a></li>
+                    <li style="font-family:Garamond;font-size:16px"><a href="{{route('categoria.show', $cate->id)}}">{{$cate->nombre}}</a></li>
                     @endforeach
                   </ul>
                     </li>

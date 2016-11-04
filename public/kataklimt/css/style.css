@@ -163,7 +163,7 @@ header {
 .nav-collapse_ .nav ul {
   position: absolute;
   display: none;
-  width: 120px;
+  width: 180px;
   left: -18px;
   top: 115px;
   list-style: none;
