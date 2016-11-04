@@ -60,6 +60,9 @@ Route::get('centros/{id}/destroy',[
 	'uses' => 'CentrosController@destroy',
 	'as' => 'centros.destroy1']);
 
+Route::get('centros/{id}/edit',[
+	'uses' => 'CentrosController@edit',
+	'as' => 'centros.edit1']);
 
 
 //rutas para los albums

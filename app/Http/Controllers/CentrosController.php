@@ -49,7 +49,8 @@ $centro = new CentroModel();
 $centro->nombre = $request->nombre;
 $centro->direccion=$request->direccion;
 $centro->region=$request->region;
-$centro->codigoPostal=$request->telefono;
+$centro->codigoPostal=$request->codigoPostal;
+$centro->telefono=$request->telefono;
 $centro->responsable=$request->responsable;
 $centro->save();
  //       dd($request->all());
@@ -86,6 +87,10 @@ $event = Evento::where('centroOrganizador', $centro->id)->get();
     public function edit($id)
     {
         //
+
+        $centro = CentroModel::find($id);
+        return view('admin.centros.edit')->with(['centro'=>$centro]);
+
     }
 
     /**
